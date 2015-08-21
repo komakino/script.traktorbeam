@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="General">
+		<setting label="Movie Folder:" type="folder" id="movie_folder" source="auto" option="writeable" default="special://temp/movies/"/>
+		<setting label="Show Folder:" type="folder" id="show_folder" source="auto" option="writeable" default="special://temp/shows/"/>
+		<setting label="Action:" type="labelenum" id="action" values="links|play"/>
+	    <setting type="sep"/>
+		<setting label="Sync every (hours):" type="slider" id="frequency" default="4" range="0.5,0.5,48" option="float" />
+	</category>
+	<category label="Trakt.tv">
+	    <setting label="Username:" type="text" id="trakt_username" default=""/>
+	    <setting label="Password:" type="text" id="trakt_password" option="hidden" default=""/>
+	    <setting type="sep"/>
+		<setting label="Sync new episodes:" type="bool" id="sync_trakt_episodes" default="true" />
+		<setting label="Sync watchlist:" type="bool" id="sync_trakt_watchlist" default="true" />
+		<setting label="Show QR-code" type="action" action="RunScript(script.traktorbeam, show-qr)"/>
+	</category>
+  <category label="iMDB">
+	    <setting label="User ID:" type="text" id="imdb_userid" default=""/>
+	    <setting type="sep"/>
+		<setting label="Sync watchlist:" type="bool" id="sync_imdb_watchlist" default="true" />
+  </category>
+</settings>
