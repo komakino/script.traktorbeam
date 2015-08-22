@@ -1,4 +1,4 @@
-import sys, os, xbmc, xbmcaddon
+import sys, os, xbmc
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'resources', 'site-packages'))
 
 from traktorbeam import service, log, addon
@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
         service.run()
 
-        # Sleep/wait for abort for 10 seconds
+        # Sleep/wait for abort
         if monitor.waitForAbort(seconds):
             # Abort was requested while waiting. We should exit
             log.info("Stopping service")
